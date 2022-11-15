@@ -20,7 +20,6 @@ public class CampaignController {
         this.productRepository = productRepository;
     }
 
-
     @GetMapping("/api/campaigns")
     public ResponseEntity<Object> getCampaigns(){
         return new ResponseEntity<>(campaignService.findAll(), HttpStatus.OK);
@@ -43,8 +42,8 @@ public class CampaignController {
     @DeleteMapping("/api/campaign/{id}")
     public ResponseEntity<String> deleteCampaign(@PathVariable Long id){
         try {
-            if (this.campaignService.existCampaignByCampaignId(id)) {
-                this.campaignService.delete(id);
+            if (campaignService.existCampaignByCampaignId(id)) {
+                campaignService.delete(id);
                 return new ResponseEntity<>("Campaign successfully deleted", HttpStatus.OK);
             }
                 return new ResponseEntity<>("Campaign not found", HttpStatus.NOT_FOUND);

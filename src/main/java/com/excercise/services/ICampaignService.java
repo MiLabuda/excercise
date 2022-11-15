@@ -1,7 +1,6 @@
 package com.excercise.services;
 
 import com.excercise.model.Campaign;
-import com.excercise.model.User;
 
 
 import java.util.List;

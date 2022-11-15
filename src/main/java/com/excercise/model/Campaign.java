@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
@@ -29,6 +30,7 @@ public class Campaign {
     private Long minimalBid;
     @NotNull
     private Long campaignFunds;
+
     private boolean activeStatus;
     @NotBlank
     private String targetTown;
@@ -52,5 +54,18 @@ public class Campaign {
         GDANSK,
         WROCLAW,
         KATOWICE
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Campaign)) return false;
+        Campaign campaign = (Campaign) o;
+        return id.equals(campaign.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

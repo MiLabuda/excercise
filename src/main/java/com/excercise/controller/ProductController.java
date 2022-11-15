@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
+@RequestMapping("/api/products")
 public class ProductController {
 
     private final IProductService productService;
@@ -19,18 +20,18 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/api/products")
+    @GetMapping
     public ResponseEntity<Object> getProducts(){
         return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
     }
 
-    @PostMapping("/api/products")
+    @PostMapping
     public @ResponseBody
     ResponseEntity<Object> sendNewProduct(@RequestBody @Valid Product product){
         productService.save(product);
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
-    @DeleteMapping("/api/product/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id){
         try {
             if (productService.existProductById(id)) {

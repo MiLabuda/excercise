@@ -1,7 +1,6 @@
 package com.excercise.services.impl;
 
 import com.excercise.model.Campaign;
-import com.excercise.model.User;
 import com.excercise.repository.ICampaignRepository;
 import com.excercise.repository.IProductRepository;
 import com.excercise.services.ICampaignService;
@@ -25,6 +24,7 @@ public class CampaignService implements ICampaignService {
 
     @Override
     public void save(Campaign campaign, Long productId) {
+        productRepository.findProductById(productId).setProductFunds(productRepository.findProductById(productId).getProductFunds()- campaign.getCampaignFunds());
         campaign.setId();
         campaign.setProduct(productRepository.getReferenceById(productId));
         campaignRepository.save(campaign);
@@ -50,7 +50,12 @@ public class CampaignService implements ICampaignService {
 
     @Override
     public void delete(Long id) {
+        refund(id);
         campaignRepository.delete(campaignRepository.findCampaignById(id));
+    }
+
+    private void refund(Long id) {
+        campaignRepository.findCampaignById(id).getProduct().setProductFunds(campaignRepository.findCampaignById(id).getProduct().getProductFunds()+ campaignRepository.findCampaignById(id).getCampaignFunds());
     }
 
     @Override
