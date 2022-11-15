@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface ICampaignService {
     List<Campaign> findAll();
-    List<Campaign> getCampaignByUser(User user);
     void save(Campaign campaign, Long productId);
     void edit(Long id, Campaign campaign);
     void delete(Long id);
@@ -16,4 +15,6 @@ public interface ICampaignService {
     Campaign getCampaignById(Long id);
     List<Campaign> getCampaignsByProduct(Long id);
     boolean existCampaignByCampaignId(Long id);
+    boolean enoughFunds(Long productFunds, Long campaignFunds);
+
 }

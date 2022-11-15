@@ -1,6 +1,7 @@
 package com.excercise.controller;
 
 import com.excercise.model.Campaign;
+import com.excercise.repository.IProductRepository;
 import com.excercise.services.ICampaignService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +13,11 @@ import javax.validation.Valid;
 public class CampaignController {
 
     private final ICampaignService campaignService;
+    private final IProductRepository productRepository;
 
-    public CampaignController(ICampaignService campaignService) {
+    public CampaignController(ICampaignService campaignService, IProductRepository productRepository) {
         this.campaignService = campaignService;
+        this.productRepository = productRepository;
     }
 
 
@@ -30,8 +33,12 @@ public class CampaignController {
 
     @PostMapping("/api/product/{productId}/campaigns")
     public @ResponseBody ResponseEntity<Object> sendNewCampaign(@PathVariable Long productId, @RequestBody @Valid Campaign campaign){
-        campaignService.save(campaign, productId);
-        return new ResponseEntity<>(campaign, HttpStatus.OK);
+
+        if (!campaignService.enoughFunds(productRepository.getReferenceById(productId).getProductFunds(), campaign.getCampaignFunds())) {
+            return new ResponseEntity<>("There is no enough product founds for this campaign", HttpStatus.BAD_REQUEST);
+        }
+            campaignService.save(campaign, productId);
+            return new ResponseEntity<>(campaign, HttpStatus.OK);
     }
     @DeleteMapping("/api/campaign/{id}")
     public ResponseEntity<String> deleteCampaign(@PathVariable Long id){

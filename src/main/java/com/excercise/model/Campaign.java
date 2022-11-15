@@ -26,9 +26,9 @@ public class Campaign {
     @ElementCollection(targetClass=String.class)
     private List<String> keywords;
     @NotNull
-    private int minimalBid;
+    private Long minimalBid;
     @NotNull
-    private int campaignFunds;
+    private Long campaignFunds;
     private boolean activeStatus;
     @NotBlank
     private String targetTown;

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -23,6 +24,8 @@ public class Product {
     private Long id;
     @NotBlank
     private String name;
+    @NotNull
+    private Long productFunds;
     @OneToMany
     @JoinColumn(name ="t_campaign")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})

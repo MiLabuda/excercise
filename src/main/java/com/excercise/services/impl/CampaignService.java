@@ -49,11 +49,6 @@ public class CampaignService implements ICampaignService {
     }
 
     @Override
-    public List<Campaign> getCampaignByUser(User user) {
-        return null;
-    }
-
-    @Override
     public void delete(Long id) {
         campaignRepository.delete(campaignRepository.findCampaignById(id));
     }
@@ -77,4 +72,11 @@ public class CampaignService implements ICampaignService {
     public boolean existCampaignByCampaignId(Long id) {
         return this.campaignRepository.existsCampaignById(id);
     }
+
+    @Override
+    public boolean enoughFunds(Long productFunds, Long campaignFunds) {
+        return productFunds - campaignFunds > 0;
+    }
+
+
 }
