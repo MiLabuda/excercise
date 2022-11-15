@@ -1,0 +1,349 @@
+{
+	"variables": [],
+	"info": {
+		"name": "excerciseCollection",
+		"_postman_id": "43a1aadb-75f2-614d-4d30-b9eefd8b18d4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"url": "http://localhost:8080/api/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Quiz App\",\n  \"productFunds\":  10000\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"url": "http://localhost:8080/api/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Train tickets App\",\n  \"productFunds\":  500000\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"url": "http://localhost:8080/api/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Messenger App\",\n  \"productFunds\":  1500000000\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"url": "http://localhost:8080/api/products",
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"The Java Logo\",\n  \"text\": \"What is depicted on the Java logo?\",\n  \"options\": [\"Robot\",\"Tea leaf\",\"Cup of coffee\",\"Bug\"],\n  \"answer\": 2\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/1/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/1/campaigns",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV campaign\",\n  \"keywords\": [\"quiz\",\"questions\",\"answers\"],\n  \"minimalBid\": 500,\n\t\"campaignFunds\": 1500,\n\t\"targetTown\": \"WARSZAWA\",\n\t\"radiusInKm\":500\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/1/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/1/campaigns",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Social Media campaign\",\n  \"keywords\": [\"quiz\",\"questions\",\"answers\"],\n  \"minimalBid\": 250,\n\t\"campaignFunds\": 150,\n\t\"targetTown\": \"WARSZAWA\",\n\t\"radiusInKm\":500\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/2/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/2/campaigns",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Newspapers campaign\",\n  \"keywords\": [\"trains\",\"tickets\",\"railways\"],\n  \"minimalBid\": 100,\n\t\"campaignFunds\": 5000,\n\t\"targetTown\": \"KRAKOW\",\n\t\"radiusInKm\":100\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/2/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/2/campaigns",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Newspapers campaign\",\n  \"keywords\": [\"trains\",\"tickets\",\"railways\"],\n  \"minimalBid\": 100,\n\t\"campaignFunds\": 50,\n\t\"targetTown\": \"KRAKOW\",\n\t\"radiusInKm\":100\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/3/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/3/campaigns",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV campaign\",\n  \"keywords\": [\"messaged\",\"communication\"],\n  \"minimalBid\": 1000,\n\t\"campaignFunds\": 150,\n\t\"targetTown\": \"WROCLAW\",\n\t\"radiusInKm\":1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/3/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/3/campaigns",
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV campaign\",\n  \"keywords\": [\"messaged\",\"communication\"],\n  \"minimalBid\": 1000,\n\t\"campaignFunds\": 150,\n\t\"targetTown\": \"WROCLAW\",\n\t\"radiusInKm\":1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/product/2/campaigns",
+			"request": {
+				"url": "http://localhost:8080/api/product/2/campaigns",
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV campaign\",\n  \"keywords\": [\"messaged\",\"communication\"],\n  \"minimalBid\": 1000,\n\t\"campaignFunds\": 150,\n\t\"targetTown\": \"WROCLAW\",\n\t\"radiusInKm\":1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/campaign/5",
+			"request": {
+				"url": "http://localhost:8080/api/campaign/5",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV campaign\",\n  \"keywords\": [\"messaged\",\"communication\"],\n  \"minimalBid\": 1000,\n\t\"campaignFunds\": 150,\n\t\"targetTown\": \"WROCLAW\",\n\t\"radiusInKm\":1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/campaign/5",
+			"request": {
+				"url": "http://localhost:8080/api/campaign/5",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TV campaign\",\n  \"keywords\": [\"messaged\",\"communication\"],\n  \"minimalBid\": 1000,\n\t\"campaignFunds\": 150,\n\t\"targetTown\": \"WROCLAW\",\n\t\"radiusInKm\":1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
